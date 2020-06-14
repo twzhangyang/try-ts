@@ -1,14 +1,20 @@
 import * as ActionTypes from './../actions/index';
 import { combineReducers } from 'redux';
 
-const numberReducer = (state = 0, action) => {
+const initalState = {
+  number:0
+};
+
+const numberReducer = (state = initalState, action) => {
+  const newState = {...state};
+
   switch (action.type) {
-    case ActionTypes.INCREMENT:
-      return state + 1;
+    case ActionTypes.INCREMENTPOSTS:
+      return newState.number + 1;
     case ActionTypes.DECREMENT:
-      return state -1 ;
+      return newState.number -1 ;
     default:
-      return state;
+      return newState;
   }
 };
 

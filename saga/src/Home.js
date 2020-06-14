@@ -15,8 +15,9 @@ const Home = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  const { numberReducer } = state;
-  return { number: numberReducer };
+  console.log(state);
+  const { numberReducer: { number }} = state;
+  return { number };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

@@ -1,2 +1,3 @@
 export const INCREMENT = "INCREMENT";
+export const INCREMENTPOSTS = "INCREMENTPOSTS";
 export const DECREMENT = "DECREMENT";
