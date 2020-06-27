@@ -1,11 +1,10 @@
 import { parseInputs } from './app/utils/parse-inputs';
-import { alertService } from './app/alert-service';
 
 export const run = (alert, component) => {
-  alertService.hideErrors();
+  alert.hideErrors();
 
   component.onclick(() => {
-    alertService.hideErrors();
+    alert.hideErrors();
     const inputs = component.getInputs();
     const parsedInputs = parseInputs(inputs);
     if (inputsAreValid(parsedInputs)) {
