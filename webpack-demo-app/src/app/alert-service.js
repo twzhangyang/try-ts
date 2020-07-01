@@ -5,7 +5,7 @@ export class AlertService {
     this.errorBox = document.getElementById("error");
   }
 
-  handleAdditionError = (inputs, numbers) => {
+  handleAdditionError(inputs, numbers) {
     const fullMessage = inputs.reduce((message, str, index) => {
       if (inputsAreValid(numbers[index])) {
         return message + "";
@@ -18,7 +18,7 @@ export class AlertService {
     errorBox.innerText = fullMessage;
   };
 
-  hideErrors = () => {
+  hideErrors(){
     errorBox.classList.add("invisible");
   };
 }
