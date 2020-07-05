@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import ReactDOM from 'react-dom';
 
-export default function App(): JSX.Element {
+export const App = (): JSX.Element => {
   const sum = (a: number, b: number): number => {
     return a + b;
   }
 
+  const [value, setValue] = useState('');
+  debugger
+
   return (
-    <div>
+    <Fragment>
       Hello
       {sum(6, 3)}
-    </div>
+      <h1> Todo list</h1>
+      <form>
+        <input type='text' required/>
+        <button type='submit'> Add Todo</button>
+      </form>
+    </Fragment>
   )
 }
 

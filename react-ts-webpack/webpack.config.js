@@ -21,5 +21,9 @@ module.exports = {
   module: {rules},
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+  },
+  devServer: {
+    contentBase: './',
+    port: 8010
   }
 }
