@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import ReactDOM from 'react-dom';
+import Root from './Root';
 
 type FormElem = React.FormEvent<HTMLFormElement>
 
@@ -66,4 +67,4 @@ export const App = (): JSX.Element => {
 
 const root = document.getElementById('app-root');
 
-ReactDOM.render(<App/>, root);
+ReactDOM.render(<Root/>, root);
