@@ -23,5 +23,7 @@ function getProperties<T, K extends keyof T>(obj: T, names: K[]): T[K][] {
   return names.map(name => obj[name]);
 }
 
+const getProperties1 = <T, K extends keyof T>(obj: T, names: K[]): T[K][] => names.map(name => obj[name]);
+
 const catAgeAndName = getProperties(cat, ['feed', 'name']);
 

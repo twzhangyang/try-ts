@@ -49,3 +49,5 @@ interface Tab<T> {
 }
 
 type NumberTab = Tab<Number>;
+
+const makeArray1 = <X extends string & number, Y = number>(x: X, y: Y): [X, Y] => [x, y];
