@@ -1,3 +1,14 @@
 {
-  "books": [{ "name": "Reafctoring"}, { "name": "Domain-driven design"}]
+  "books": [
+    {
+      "name": "Refactoring",
+      "id": 1,
+      "description": "description of Refactoring"
+    },
+    {
+      "name": "Domain-driven design",
+      "id": 2,
+      "description": "description of Domain-driven design"
+    }
+  ]
 }

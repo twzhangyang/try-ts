@@ -75,7 +75,7 @@ function buildRewrite(relations) {
   }, {})
 }
 
-server.use(jsonServer.rewriter(buildRewrite(relations)))
+// server.use(jsonServer.rewriter(buildRewrite(relations)))
 
 server.use(router)
 

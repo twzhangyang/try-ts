@@ -1,8 +1,17 @@
 import React from 'react';
 import {render} from '@testing-library/react';
-import BookList from "../src/BookList";
+import BookList from "./BookList";
+import {MemoryRouter as Router} from 'react-router-dom';
 
 describe('BookList', () => {
+  const renderWithRouter = (component) => {
+    return {
+      ...render(<Router>
+        {component}
+      </Router>)
+    }
+  }
+
   it('loading', () => {
     const props = {
       loading: true
@@ -31,11 +40,8 @@ describe('BookList', () => {
       ]
     }
 
-    const {container} = render(<BookList {...props} />);
+    const {container} = renderWithRouter(<BookList {...props} />);
     const titles = [...container.querySelectorAll('h2')].map(x => x.innerHTML);
     expect(titles).toEqual(['Refactoring', 'Domain-driven design']);
   });
-
-
-
 })

@@ -1,7 +1,5 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
-import BookList from "../BookList";
-import {DialogTitle} from "@material-ui/core";
 
 const useRemoteService = (initial) => {
   const [books, setBooks] = useState([]);

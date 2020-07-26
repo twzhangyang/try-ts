@@ -1,6 +1,6 @@
 import React from 'react';
 import useRemoteService from "./BookListremoteService";
-import BookList from "../BookList";
+import BookList from "./BookList";
 
 const BookListContainer = () => {
   const {books, loading, error} = useRemoteService([]);
