@@ -2,7 +2,7 @@ import React from "react";
 
 const BookList = ({books}) => {
   if(!books){
-    return null;
+    return <p>Loading</p>;
   }
 
   return <div data-test="book-list">
